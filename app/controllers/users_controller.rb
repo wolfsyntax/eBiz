@@ -36,5 +36,6 @@ class UsersController < ApplicationController
 
   def main
     @user = session[:username]
+    
   end
 end
