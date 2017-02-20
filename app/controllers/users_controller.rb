@@ -41,8 +41,12 @@ class UsersController < ApplicationController
 
   def main
     @user = session[:username]
+<<<<<<< HEAD
     @users = User.find(session[:user_id])
 
   #  @users = User.all
+=======
+    
+>>>>>>> 88920c433f775bc6b0bfa5709332017e6ab277bc
   end
 end
