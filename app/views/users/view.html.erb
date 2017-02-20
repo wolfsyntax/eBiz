@@ -1,7 +1,7 @@
 <h1>Account Details</h1>
 <div>
 	<p>Username: &emsp;<%= @user.username %><br/></p>
-	<p>Password: &emsp;<%= @user.password_hash %><br/></p>
+	<p>Password: &emsp;<%= @user.password_digest %><br/></p>
 	<p>Account Type: &emsp;<%= @user.account_type %><br/></p>
 	<%= link_to 'Login', '/login.do' %>
 </div>

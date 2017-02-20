@@ -5,12 +5,17 @@ class UsersController < ApplicationController
 
   def create
 
-  	@user = User.new
+#  	@user = User.new
 
-  	@user.username = params[:user][:username]
-  	@user.password_hash = params[:user][:password]
-    @user.account_type = params[:user][:account_type]
-  	if @user.save
+#    @user.account_type = params[:user][:account_type]
+
+#    @user.username = params[:user][:username]
+#    @user.password = params[:user][:password]
+#    @user.password_confirmation = params[:user][:password_confirmation]
+  
+    @user = User.new user_params
+  	
+    if @user.save
   		redirect_to "/#{@user.id}/view/" #root_url, :notice => "Signed up!"
   	else
   		render "new"
@@ -42,9 +47,22 @@ class UsersController < ApplicationController
   def main
     @user = session[:username]
 
-    @users = User.find(session[:user_id])
+    if session[:user_id] == nil
+      @user = ""
+    else
+      @users = User.find(session[:user_id])
+      @account = @users.account_type
+      @acname = @users.username
 
+    end
   #  @users = User.all
 
   end
+
+private
+  
+  def user_params
+    params.require(:user).permit(:username,:password, :password_confirmation, :account_type)
+  end
+
 end
