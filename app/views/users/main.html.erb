@@ -1,6 +1,4 @@
 <% if @user != nil %>
-	
-<<<<<<< HEAD
 
 	<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
 		<ul class="nav navbar-nav navbar-fixed-top">
@@ -60,58 +58,7 @@
 
 
 	<% end %>
-=======
-	
 
-	<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
-		<ul class="nav navbar-nav navbar-fixed-top">
-			<li class="<%= 'active' if params[:action] == 'index' %> nav navbar navbar-right" style = "margin-right: 1%;">
-				<%= link_to "", "/logout.do", class: "glyphicon glyphicon-log-out", data: {confirm: 'Are you sure?'}, title: 'Logout', 'data-toggle' => 'tooltip', 'data-placement' => 'left' %>
-			</li>
-		</ul>
-	</nav>
-	<br/>
-	<div class = "container-fluid col-md-12" style = "margin-top: 3%;">
-		<div class = "col-md-2">
-			<ul class="nav navbar navbar-fixed-left">
-				<li><%= link_to 'Register new account', ''%></li>
-				<li><%= link_to 'View All subscribers', ''%></li>
-				<li><%= link_to 'Change Password', '' %></li>
-			</ul>
-		</div>
-		<div class = "col-md-10">
-			<table class = "col-md-12">
-				<tr>
-					<td>
-						#
-					</td>
-					<td>
-						Username
-					</td>
-
-					<td>
-						Balance Info
-					</td>
-					<td>
-						User Info
-					</td>
-					<td>Transaction Report</td>
-				</tr>
-				<% %>
-					<tr>
-						<td>1</td>
-						<td>639468127889</td>
-						<td><%= link_to 'Balance Info', '#' %></td>
-						<td><%= link_to 'User Info', '#' %></td>
-						<td><%= link_to 'View Transaction', '#' %></td>
-						
-					</tr>
-				<% %>
-			</table>
-		</div>
-		
-	</div>
->>>>>>> 88920c433f775bc6b0bfa5709332017e6ab277bc
 <% else %>
 	<div class="dialog">
     	<div>
