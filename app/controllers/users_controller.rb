@@ -8,8 +8,8 @@ class UsersController < ApplicationController
   	@user = User.new
 
   	@user.username = params[:user][:username]
-  	@user.password = params[:user][:password]
-
+  	@user.password_hash = params[:user][:password]
+    @user.account_type = params[:user][:account_type]
   	if @user.save
   		redirect_to "/#{@user.id}/view/" #root_url, :notice => "Signed up!"
   	else
@@ -34,7 +34,15 @@ class UsersController < ApplicationController
 
   end
 
+  def admin_new
+    @users = User.new
+
+  end
+
   def main
     @user = session[:username]
+    @users = User.find(session[:user_id])
+    
+  #  @users = User.all
   end
 end

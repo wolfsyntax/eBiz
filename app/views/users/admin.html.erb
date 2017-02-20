@@ -1,5 +1,5 @@
 <h1>Create Account</h1>
-<%= form_for @user do |f| %>
+<%= form_for @users do |f| %>
 	
 	<% if @user.errors.any? %>
 		<div class = "error_messages" >
@@ -15,49 +15,33 @@
 <!-- --------------------------------------------------------------- -->	
 <table>
 	<tr>
-		<td>&emsp;Username s</td>
+		<td>&emsp;Username</td>
 		<td>&emsp;<%= f.text_field :username %></td>
 	</tr>
-
-	<tr>
-		<td>&emsp;</td>
-		<td>&emsp;</td>
-	</tr>
-
 	<tr>
 		<td>&emsp;Password</td>
 		<td>&emsp;<%= f.password_field :password %></td>
 	</tr>
-
-	<tr>
-		<td>&emsp;</td>
-		<td>&emsp;</td>
-	</tr>
-
 	<tr>
 		<td>&emsp;Confirm Password&emsp;</td>
 		<td>&emsp;<%= f.password_field :password_confirmation %></td>
 	</tr>
-
+	
 	<tr>
-		<td>&emsp;</td>
-		<td>&emsp;</td>
+		<td>&emsp;Confirm Password&emsp;</td>
+		<td>&emsp;<%= f.password_field :password_confirmation %></td>
 	</tr>
+	
+	<tr>
+		<td>&emsp;Account Type&emsp;</td>
+		<td>&emsp;<%= f.radio_button :password_confirmation %></td>
+	</tr>
+
 
 	<tr>
 		<td></td>
 	 	<td>&emsp;<%= f.submit 'Signup', class: 'btn btn-success' %></td>
 	</tr>
-
-	<tr>
-		<td>&emsp;</td>
-		<td>&emsp;<%= f.hidden_field(:account_type, :value => "retailer") %></td>
-	</tr>
-	
-	
-
-
-
 
 </table>
 <% end %>

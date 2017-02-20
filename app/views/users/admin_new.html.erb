@@ -1,0 +1,65 @@
+<h1>Create System Account</h1>
+<%= form_for @users do |f| %>
+	
+	<% if @users.errors.any? %>
+		<div class = "error_messages" >
+			<h2>Form is invalid</h2>
+
+			<ul>
+				<% for message in @user.errors.full_messages %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+<!-- --------------------------------------------------------------- -->	
+<table>
+	<tr>
+		<td>&emsp;Username</td>
+		<td>&emsp;<%= f.text_field :username %></td>
+	</tr>
+	
+	<tr><td></td><td>&emsp;</td></tr>
+	
+	<tr>
+		<td>&emsp;Password</td>
+		<td>&emsp;<%= f.password_field :password %></td>
+	</tr>
+	
+	<tr><td></td><td>&emsp;</td></tr>
+
+	<tr>
+		<td>&emsp;Confirm Password&emsp;</td>
+		<td>&emsp;<%= f.password_field :password_confirmation %></td>
+	</tr>
+	
+	<tr><td></td><td>&emsp;</td></tr>
+
+	<tr>
+		<td>&emsp;Confirm Password&emsp;</td>
+		<td>&emsp;<%= f.password_field :password_confirmation %></td>
+	</tr>
+	
+	<tr><td></td><td>&emsp;</td></tr>
+
+	<tr>
+		<td>&emsp;Account Type&emsp;</td>
+		<td>&emsp;
+			<p>
+				&emsp;<%= f.radio_button :account_type, "techsupport" %>&emsp;Technical Support<br/>
+				&emsp;<%= f.radio_button :account_type, "admin" %>&emsp;Administrator<br/>
+				&emsp;<%= f.radio_button :account_type, "retailer" %>&emsp;Retailer<br/>
+			</p>
+		</td>
+
+	</tr>
+
+	<tr><td></td><td>&emsp;</td></tr>
+
+	<tr>
+		<td></td>
+	 	<td>&emsp;<%= f.submit 'Signup', class: 'btn btn-success' %></td>
+	</tr>
+
+</table>
+<% end %>
