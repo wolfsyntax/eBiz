@@ -35,14 +35,14 @@ class UsersController < ApplicationController
   end
 
   def admin_new
-    @users = User.new
+    @users = User.new    
 
   end
 
   def main
     @user = session[:username]
     @users = User.find(session[:user_id])
-    
+
   #  @users = User.all
   end
 end
