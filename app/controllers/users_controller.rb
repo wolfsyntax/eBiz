@@ -12,9 +12,9 @@ class UsersController < ApplicationController
 #    @user.username = params[:user][:username]
 #    @user.password = params[:user][:password]
 #    @user.password_confirmation = params[:user][:password_confirmation]
-  
+    
     @user = User.new user_params
-  	
+
     if @user.save
   		redirect_to "/#{@user.id}/view/" #root_url, :notice => "Signed up!"
   	else
@@ -23,8 +23,8 @@ class UsersController < ApplicationController
 
   end
 
-  def view_balance
-    @user = User.find(params[:id])
+  def balance
+    #@user = User.find(params[:id])
   end
 
   def update_balance
@@ -49,6 +49,14 @@ class UsersController < ApplicationController
 
   def admin_new
     @users = User.new    
+
+    @info = "+"
+
+    if session[:user_id] != nil
+      data = User.find(session[:user_id])
+      @info = data.account_type
+    end
+
 
   end
 

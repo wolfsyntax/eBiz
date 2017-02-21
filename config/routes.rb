@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'sites/support'
 
   get '/new/admin.html' => "users#admin_new"
-  
+  get 'balance.info'    => "users#balance"
   
   get 'logout.do'	=> "sessions#destroy", :as => "logout"
   get 'login.do'	=> "sessions#create", :as => "login"

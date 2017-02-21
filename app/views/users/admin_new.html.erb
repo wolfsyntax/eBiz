@@ -37,8 +37,15 @@
 		<td>&emsp;Account Type&emsp;</td>
 		<td>&emsp;
 			<p>
-				&emsp;<%= f.radio_button :account_type, "techsupport" %>&emsp;Technical Support<br/>
-				&emsp;<%= f.radio_button :account_type, "admin" %>&emsp;Administrator<br/>
+
+				<% if @info == "techsupport" %>
+					&emsp;<%= f.radio_button :account_type, "worker" %>&emsp;Worker<br/>
+				<% end %>
+				<% if @info == "admin" %>
+					&emsp;<%= f.radio_button :account_type, "worker" %>&emsp;Worker<br/>
+					&emsp;<%= f.radio_button :account_type, "techsupport" %>&emsp;Technical Support<br/>
+					&emsp;<%= f.radio_button :account_type, "admin" %>&emsp;Administrator<br/>
+				<% end %>
 				&emsp;<%= f.radio_button :account_type, "retailer" %>&emsp;Retailer<br/>
 			</p>
 		</td>
