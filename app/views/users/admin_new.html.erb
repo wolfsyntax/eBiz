@@ -40,8 +40,7 @@
 
 				<% if @info == "techsupport" %>
 					&emsp;<%= f.radio_button :account_type, "worker" %>&emsp;Worker<br/>
-				<% end %>
-				<% if @info == "admin" %>
+				<% elsif @info == "admin" %>
 					&emsp;<%= f.radio_button :account_type, "worker" %>&emsp;Worker<br/>
 					&emsp;<%= f.radio_button :account_type, "techsupport" %>&emsp;Technical Support<br/>
 					&emsp;<%= f.radio_button :account_type, "admin" %>&emsp;Administrator<br/>
