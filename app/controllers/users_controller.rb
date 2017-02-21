@@ -23,6 +23,14 @@ class UsersController < ApplicationController
 
   end
 
+  def view_balance
+    @user = User.find(params[:id])
+  end
+
+  def update_balance
+    @user = User.find(params[:id])
+  end
+
   def destroy
 
   	@user = User.find(params[:id])
@@ -53,6 +61,7 @@ class UsersController < ApplicationController
       @users = User.find(session[:user_id])
       @account = @users.account_type
       @acname = @users.username
+      @clients = User.all
 
     end
   #  @users = User.all

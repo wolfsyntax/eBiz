@@ -21,7 +21,7 @@
 	<% if @account != 'retailer' %>
 
 		<div class = "container-fluid col-md-12" style = "margin-top: 3%;">
-			<div class = "col-md-2">
+			<div class = "col-md-2" style = "background-color: gray;">
 				<ul class="nav navbar navbar-fixed-left">
 					<li><%= link_to 'Register new account', ''%></li>
 					<li><%= link_to 'View All subscribers', ''%></li>
@@ -46,16 +46,19 @@
 						</td>
 						<td>Transaction Report</td>
 					</tr>
-					<% %>
+					<% x = 1 %>
+					<% @clients.each do |f| %>
+						<% if f.account_type == 'retailer' %>
 						<tr>
-							<td>1</td>
-							<td>639468127889</td>
-							<td><%= link_to 'Balance Info', '#' %></td>
-							<td><%= link_to 'User Info', '#' %></td>
+							<td><%= x %></td>
+							<td><%= f.username %></td>
+							<td><%= link_to 'Balance Info', "#" %></td>
+							<td><%= link_to 'User Info', "/#{f.id}/view" %></td>
 							<td><%= link_to 'View Transaction', '#' %></td>
-							
+							<% x += 1 %>
 						</tr>
-					<% %>
+						<% end %>
+					<% end %>
 				</table>
 			</div>
 			
