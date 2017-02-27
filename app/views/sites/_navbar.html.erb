@@ -58,7 +58,7 @@
 											&emsp;|&emsp;
 										</td>
 										<td>
-											<%= link_to 'Logout', '/logout.do' %>
+											<%= link_to 'Logout', '/logout.do', data: {confirm: 'Are you sure?'} %>
 										</td>
 									</tr>
 								</table>
@@ -89,10 +89,10 @@
 	</tr>
 	<tr>
 		<td>
-			<table style = "width: 111%;">
+			<table style = "width: 110%;">
 				<tr style = "background-color: gray;">
 					<td style = "background-color: white;">&emsp;Updates Bulletin&emsp;</td>
-					<td><marquee>The Quick Brown Fox Jumps over the Lazy Dog.</marquee></td>
+					<td><marquee><%= %>|<%= %>. The Quick Brown Fox Jumps Over the Lazy DOg</marquee></td>
 				</tr>
 			</table>
 		</td>

@@ -1,0 +1,7 @@
+<h1>Create new promo</h1>
+<%= form_tag '/new/promos.html' do %>
+	
+	<%= text_field_tag :image_name %>
+	<%= text_field_tag :links %>
+	<%= submit_tag "Create"%>
+<% end %>

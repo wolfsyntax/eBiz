@@ -1,4 +1,19 @@
 class UsersController < ApplicationController
+
+  def new_promo
+    @promos = Carousel.new
+  end
+
+  def create_promo
+    @promos = Carousel.new
+    @promos.image_name = params[:image_name]
+    @promos.link = params[:links]
+
+    if @promos.save
+      redirect_to '/signup.php'
+    end
+  end
+
   def new
   	@user = User.new
   end

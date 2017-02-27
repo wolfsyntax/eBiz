@@ -16,8 +16,16 @@ Rails.application.routes.draw do
   get 'signup.php'	=> "users#new", :as => "signup"
   get '/:id/view'	=> "users#view"
 
+  get '/new/promos' => "users#new_promo"
+  post '/new/promos.html' => "users#create_promo"
+
+  get '/new/announcement.html' => "sites#a_new"
+
   get '/dashboard'	=> "users#main"
   root :to => "sites#index"
+  
+
+
   
   resources :users
   resources :sessions

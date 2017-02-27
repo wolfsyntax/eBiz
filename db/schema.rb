@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220112525) do
+ActiveRecord::Schema.define(version: 20170227150300) do
+
+  create_table "announcements", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "Web_URL"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carousels", force: :cascade do |t|
+    t.string   "image_name"
+    t.string   "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EBiz</title>
-    <%= csrf_meta_tags %>
+    <title>eBiz</title>
+    	<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  	</head>
 
-  <body>
-    <%= yield %>
-  </body>
+  	<body>
+    	<%= yield %>
+  	</body>
+
+  	<footer class = "navbar-fixed-bottom col-md-12" style = "background-color: white; margin: auto; text-align: center;">
+		<p style = "margin-top: 10px;">&copy; eBiz. All Rights Reserved 2017</p>
+	</footer>
 </html>
 
