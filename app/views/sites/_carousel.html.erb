@@ -22,12 +22,16 @@
   					<% @promos.each do |f| %>
   						<% if @counter == 0 then %>
 	    					<div class="item active">
-	    						<%= link_to image_tag("1.jpg", :alt => "Prepaid Products"), {:class => "img-responsive", :alt => "Responsive image"} %>
+	    						<%= link_to 'LEARN MORE', "#{f.link}", class: "btn btn-primary" %>
+	    						<%= link_to image_tag("#{f.image_name}", :alt => "Prepaid Products"), {:class => "img-responsive", :alt => "Responsive image"} %>
+
 	    					</div>
 	    				<% else %>
 	    					<div class = "item">
-	      						<%= link_to image_tag("#{f.link}", :alt => "Prepaid Products"), {:class => "img-responsive", :alt => "Responsive image"} %>
+	      						<%= link_to image_tag("#{f.image_name}", :alt => "Prepaid Products"), {:class => "img-responsive", :alt => "Responsive image"} %>
+	      						<%= link_to 'LEARN MORE', "#{f.link}", class: "btn btn-primary" %>
 	    					</div>
+
 	      				<% end %>
 	    					
 
