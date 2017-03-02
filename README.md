@@ -1,14 +1,17 @@
 # README
 
 #Table of Contents 
+#Chapter I
+##Introduction
 
-Introduction
+#Chapter II
+##Review of Related Literature
 
-Review of Related Literature
+#Chapter III
+##Technical Background
 
-Technical Background
-
-Methodology
+#Chapter IV
+##Methodology
 
 
 
