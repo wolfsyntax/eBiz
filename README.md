@@ -1,6 +1,8 @@
-Table of Contents 
+#!/usr/bin/env ruby
+
+#Table of Contents 
 -----------------
-#[Chapter I](#chapter1)
+[Chapter I](#chapter1)
 
 [Introduction](#introduction)
 	
