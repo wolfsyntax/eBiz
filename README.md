@@ -1,22 +1,24 @@
+[![Build Status](https://travis-ci.org/ekalinin/github-markdown-toc.svg?branch=master)](https://travis-ci.org/ekalinin/github-markdown-toc)
 # README
 
 
 
-##Table of Contents 
+Table of Contents 
+=================
 
--(#Chapter I)
+#Chapter I
 *Introduction
 
--(#Chapter II)
+#Chapter II
 *Review of Related Literature
 
--(#Chapter III)
+#Chapter III
 *Technical Background
 
--(#Chapter IV)
+#Chapter IV
 *Methodology
 
--(#Bibliography)
+#Bibliography
 
 
 
