@@ -1,16 +1,12 @@
 #Table of Contents 
 -----------------
-##Chapter I
-	*Introduction
+##1	Introduction
 	
-##Chapter II
-	*Review of Related Literature
+##2	Review of Related Literature
 	
-##Chapter III
-	*Technical Background
+##3	Technical Background
 	
-##Chapter IV
-	*Methodology
+##4	Methodology
 	
 ##Bibliography
 
