@@ -1,8 +1,8 @@
 Table of Contents 
 ==================
 
-Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
-==============
+#Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
 	1.1 Project Context. . . . . . . . . . . . . . . . . . . . . . . . . . 2
 	1.2	Purpose and Description					
 	1.3	Objectives
