@@ -2,7 +2,7 @@
 -----------------
 ##[Chapter I](#chapter1)
 
-[Introduction](#introduction)
+Introduction
 	
 ##[Chapter II](#chapterII)
 
