@@ -1,3 +1,5 @@
+➥ ./gh-md-toc ~/projects/Dockerfile.vim/README.md 
+
 Table of Contents 
 =================
 
@@ -20,7 +22,6 @@ Table of Contents
 *[Bibliography](#bibliography)
 
                                                                                                                                              Вс. марта 22 22:51:46 MSK 2015
-
 
 
 
