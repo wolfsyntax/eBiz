@@ -1,20 +1,14 @@
-./gh-md-toc https://github.com/ekalinin/envirius/blob/master/README.md
-Table of Contents 
+➥ ./gh-md-toc ~/projects/Dockerfile.vim/README.md                                                                                                                                                Вс. марта 22 22:51:46 MSK 2015
+
+Table of Contents
 =================
 
-*Chapter I
-	*Introduction
-
-*Chapter II
-	*Review of Related Literature
-
-*Chapter III
-	*Technical Background
-
-*Chapter IV
-	*Methodology
-
-*Bibliography
+  * [Dockerfile.vim](#dockerfilevim)
+  * [Screenshot](#screenshot)
+  * [Installation](#installation)
+        * [OR using Pathogen:](#or-using-pathogen)
+        * [OR using Vundle:](#or-using-vundle)
+  * [License](#license)
 
 
 
