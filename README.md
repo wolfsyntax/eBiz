@@ -1,22 +1,22 @@
 #Table of Contents 
 -----------------
-##[Chapter I](#chapter1)
+##Chapter I
 
 	*Introduction
 	
-##[Chapter II](#chapterII)
+##Chapter II
 
 	*Review of Related Literature
 	
-##[Chapter III](#chapterIII)
+##Chapter III
 
 	*Technical Background
 	
-##[Chapter IV](#chapterIV)
+##Chapter IV
 
 	*Methodology
 	
-##[Bibliography](#bibliography)
+##Bibliography
 
                                                                                                                                              Вс. марта 22 22:51:46 MSK 2015
 
