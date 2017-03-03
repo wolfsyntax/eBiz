@@ -1,14 +1,26 @@
-➥ ./gh-md-toc ~/projects/Dockerfile.vim/README.md                                                                                                                                                Вс. марта 22 22:51:46 MSK 2015
-
-Table of Contents
+Table of Contents 
 =================
 
-  * [Dockerfile.vim](#dockerfilevim)
-  * [Screenshot](#screenshot)
-  * [Installation](#installation)
-        * [OR using Pathogen:](#or-using-pathogen)
-        * [OR using Vundle:](#or-using-vundle)
-  * [License](#license)
+*[Chapter I](#chapter1)
+
+	*[Introduction](#introduction)
+
+*[Chapter II](#chapterII)
+
+	*[Review of Related Literature](#reviewofrelatedliterature)
+
+*[Chapter III](#chapterIII)
+
+	*[Technical Background](#technicalbackground)
+
+*[Chapter IV](#chapterIV)
+
+	*[Methodology](#methodology)
+
+*[Bibliography](#bibliography)
+
+                                                                                                                                             Вс. марта 22 22:51:46 MSK 2015
+
 
 
 
