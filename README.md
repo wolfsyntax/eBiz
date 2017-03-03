@@ -2,19 +2,19 @@
 -----------------
 ##[Chapter I](#chapter1)
 
-	**Introduction**
+	*Introduction
 	
 ##[Chapter II](#chapterII)
 
-	**Review of Related Literature**
+	*Review of Related Literature
 	
 ##[Chapter III](#chapterIII)
 
-	**Technical Background**
+	*Technical Background
 	
 ##[Chapter IV](#chapterIV)
 
-	**Methodology**
+	*Methodology
 	
 ##[Bibliography](#bibliography)
 
