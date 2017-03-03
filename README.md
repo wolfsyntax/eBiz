@@ -1,11 +1,11 @@
 Table of Contents 
 ==================
 
-	Introduction
+Introduction
 ==============
 	1.1 Project Context
-	1.2	
-	1.3
+	1.2	Purpose and Description
+	1.3	Objectives
 	1.4 Scope and Limitations
 
 	
