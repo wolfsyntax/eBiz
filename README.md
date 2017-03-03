@@ -1,20 +1,20 @@
-(https://npmjs.org/package/markdown-toc)
+./gh-md-toc https://github.com/ekalinin/envirius/blob/master/README.md
 Table of Contents 
 =================
 
-#Chapter I
-*Introduction
+*Chapter I
+	*Introduction
 
-#Chapter II
-*Review of Related Literature
+*Chapter II
+	*Review of Related Literature
 
-#Chapter III
-*Technical Background
+*Chapter III
+	*Technical Background
 
-#Chapter IV
-*Methodology
+*Chapter IV
+	*Methodology
 
-#Bibliography
+*Bibliography
 
 
 
