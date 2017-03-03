@@ -1,13 +1,13 @@
 Table of Contents 
 ==================
 
-Introduction
+1	Introduction
 ==============
-1.1 Project Context
-1.2	
-1.3
-1.4 Scope and Limitations
----------------
+	1.1 Project Context
+	1.2	
+	1.3
+	1.4 Scope and Limitations
+
 	
 Review of Related Literature
 ==============================
