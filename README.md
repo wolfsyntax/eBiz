@@ -1,16 +1,16 @@
 Table of Contents 
 =================
 #[Chapter I](#chapter1)
-	##[Introduction](#introduction)
+	[Introduction](#introduction)
 	
 #[Chapter II](#chapterII)
-	##[Review of Related Literature](#reviewofrelatedliterature)
+	[Review of Related Literature](#reviewofrelatedliterature)
 	
 #[Chapter III](#chapterIII)
-	##[Technical Background](#technicalbackground)
+	[Technical Background](#technicalbackground)
 	
 #[Chapter IV](#chapterIV)
-	##[Methodology](#methodology)
+	[Methodology](#methodology)
 	
 #[Bibliography](#bibliography)
 
