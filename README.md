@@ -42,13 +42,13 @@ and easier, and record the transaction of retailers. The following objectives ne
 
 * The System Administrator can create new retailer account, create new user account, process request for loadwallet replenishment and retrieve loadwallet for the incorrect transfer of amount.
 
-*The Customer sales representative process request for loadwallet replenishment. The customer sales representative can also performed the following:	
+* The Customer sales representative process request for loadwallet replenishment. The customer sales representative can also performed the following:	
 	
- *Create new retailer accounts
+ * Create new retailer accounts
 	
- *Update retailers account
+ * Update retailers account
 
- *Post updates to the update bulletin
+ * Post updates to the update bulletin
 	
 __1.4 Scope and Limitations__
 
