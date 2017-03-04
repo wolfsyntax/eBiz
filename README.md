@@ -34,7 +34,6 @@ __1.2 Purpose and Description__
 
 __1.3 Objectives__
 	
-	
 The project aims to develop a web based application that will be used to make transactions faster
 and easier, and record the transaction of retailers. The following objectives needed to be done:
 
@@ -52,8 +51,17 @@ and easier, and record the transaction of retailers. The following objectives ne
 	
 __1.4 Scope and Limitations__
 
+##Chapter 2
 
+__Review of Related System and Related Literature__
 
+##Chapter 3
+
+__Technical Background__
+
+##Chapter 4
+
+__Methodology__
 
 
 
