@@ -24,12 +24,9 @@ Table of Contents
 
 __Introduction__
 
-
-
-	
 	 The chapter discusses about the project context which involves the common problem encountered
-	of the business. The purpose and description, objectives - the general and specific objectives wherein
-	the needed modules are being specified and discussed, and the scope and limitations are also covered.
+of the business. The purpose and description, objectives - the general and specific objectives wherein
+the needed modules are being specified and discussed, and the scope and limitations are also covered.
 
 
 
