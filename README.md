@@ -20,10 +20,9 @@ Table of Contents
 
 #Bibliography
 
-#Chapter 1
+##Chapter 1
 
-##Introduction
-	
+__Introduction__
 	
 	The chapter discusses about the project context which involves the common problem encountered
 of the business. The purpose and description, objectives - the general and specific objectives wherein
