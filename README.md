@@ -33,7 +33,8 @@ __1.1 Project COntext__
 __1.2 Purpose and Description__
 
 __1.3 Objectives__
-		
+	
+	
 The project aims to develop a web based application that will be used to make transactions faster
 and easier, and record the transaction of retailers. The following objectives needed to be done:
 
@@ -43,11 +44,11 @@ and easier, and record the transaction of retailers. The following objectives ne
 
 *The Customer sales representative process request for loadwallet replenishment. The customer sales representative can also performed the following:	
 	
-	*Create new retailer accounts
+ *Create new retailer accounts
 	
-	*Update retailers account
+ *Update retailers account
 
-	*Post updates to the update bulletin
+ *Post updates to the update bulletin
 	
 __1.4 Scope and Limitations__
 
