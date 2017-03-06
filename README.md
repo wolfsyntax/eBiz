@@ -8,7 +8,7 @@ __To download this project__
   
   ---
   
-	```shell
+	```python
 	$ git clone https://github.com/wolfsyntax/eBiz.git
 	
 	$ cd eBiz
