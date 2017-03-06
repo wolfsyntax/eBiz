@@ -1,7 +1,7 @@
 __To download the Carousel Application__
   
   Note: Use the ruby stack console.
-  
+    ```ruby
 	$ md workspace
 	
 	$ cd workspace
@@ -15,5 +15,6 @@ __To download the Carousel Application__
 	$ bundle install
 	
 	$ rails server
+	```
    
  
