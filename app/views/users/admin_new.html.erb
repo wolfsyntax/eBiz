@@ -38,13 +38,10 @@
 		<td>&emsp;
 			<p>
 
-				<% if @info == "techsupport" %>
-					&emsp;<%= f.radio_button :account_type, "worker" %>&emsp;Worker<br/>
-				<% elsif @info == "admin" %>
 					&emsp;<%= f.radio_button :account_type, "worker" %>&emsp;Worker<br/>
 					&emsp;<%= f.radio_button :account_type, "techsupport" %>&emsp;Technical Support<br/>
 					&emsp;<%= f.radio_button :account_type, "admin" %>&emsp;Administrator<br/>
-				<% end %>
+
 				&emsp;<%= f.radio_button :account_type, "retailer" %>&emsp;Retailer<br/>
 			</p>
 		</td>
