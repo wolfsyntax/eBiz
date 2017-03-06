@@ -1,22 +1,18 @@
-#Carousel Application
-
-__To download the Carousel Application__
+#eBiz
+###Electronic Loading Business
+__To download the project__
   
   Note: Use the ruby stack console.
   
   ---
 	
-	$ md workspace
+	$ git clone https://github.com/wolfsyntax/eBiz.git
 	
-	$ cd workspace
+	$ cd eBiz
 	
-	$ git clone "link of app" 
-	
-	$ cd app
-	
+        $ bundle install
+
 	$ rake db:migrate
-	
-	$ bundle install
 	
 	$ rails server
 	
