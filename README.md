@@ -8,7 +8,7 @@ __To download this project__
   
   ---
   
-	
+	```bash
 	$ git clone https://github.com/wolfsyntax/eBiz.git
 	
 	$ cd eBiz
@@ -18,7 +18,7 @@ __To download this project__
 	$ rake db:migrate
 	
 	$ rails server
-	
+	```
 	After you run the server you can open the site by typing localhost:3000 in your browser.
 	
   ---
