@@ -1,68 +1,19 @@
-Table of Contents 
-==================
-
-#Introduction 
-
-	1.1 Project Context
-	1.2	Purpose and Description					
-	1.3	Objectives
-	1.4 Scope and Limitations
-
+__To download the Carousel Application__
+  
+  Note: Use the ruby stack console.
+  
+	$ md workspace
 	
-#Review of Related Literature
-
+	$ cd workspace
 	
-#Technical Background
-
+	$ git clone "link of app"
 	
-#Methodology
-
-
-#Bibliography
-
-##Chapter 1
-
-__Introduction__
-
-The chapter discusses about the project context which involves the common problem encountered
-of the business. The purpose and description, objectives - the general and specific objectives wherein
-the needed modules are being specified and discussed, and the scope and limitations are also covered.
-
-__1.1 Project COntext__
-
-__1.2 Purpose and Description__
-
-__1.3 Objectives__
+	$ cd app
 	
-The project aims to develop a web based application that will be used to make transactions faster
-and easier, and record the transaction of retailers. The following objectives needed to be done:
-
-* The Retailer can sell prepaid load products and record every transaction
-
-* The System Administrator can create new retailer account, create new user account, process request for loadwallet replenishment and retrieve loadwallet for the incorrect transfer of amount.
-
-* The Customer sales representative process request for loadwallet replenishment. The customer sales representative can also performed the following:	
+	$ rake db:migrate
 	
- * Create new retailer accounts
+	$ bundle install
 	
- * Update retailers account
-
- * Post updates to the update bulletin
-	
-__1.4 Scope and Limitations__
-
-##Chapter 2
-
-__Review of Related System and Related Literature__
-
-##Chapter 3
-
-__Technical Background__
-
-##Chapter 4
-
-__Methodology__
-
-##Bibliography
-
-
+	$ rails server
+   
+ 
