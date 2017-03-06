@@ -13,8 +13,8 @@ __To download this project__
 	
 	$ cd eBiz
 	
-        $ bundle install
-
+	$ bundle install
+	
 	$ rake db:migrate
 	
 	$ rails server
