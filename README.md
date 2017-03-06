@@ -2,9 +2,9 @@
 ###Electronic Loading Business
 __To download this project__
   
-  Note: You must download and install Ruby On Rails
+  Note: You must download and install Ruby On Rails (
   	[Windows](https://bitnami.com/redirect/to/142501/bitnami-rubystack-2.2.6-1-windows-installer.exe)
-	[Linux](https://gorails.com/setup/ubuntu/16.04)
+	[Linux](https://gorails.com/setup/ubuntu/16.04))
   
   ---
   
