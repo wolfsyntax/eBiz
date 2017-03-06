@@ -1,10 +1,13 @@
 #eBiz
 ###Electronic Loading Business
-__To download the project__
+__To download this project__
   
-  Note: Use the ruby stack console.
+  Note: You must download and install Ruby On Rails
+  	(Windows)@[https://bitnami.com/stack/ruby/installer] 
+	(Linux)@[https://gorails.com/setup/ubuntu/16.04]
   
   ---
+  
 	
 	$ git clone https://github.com/wolfsyntax/eBiz.git
 	
