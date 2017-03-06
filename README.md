@@ -2,13 +2,13 @@ __To download the Carousel Application__
   
   Note: Use the ruby stack console.
   
-    ```ruby
+  ---
 	
 	$ md workspace
 	
 	$ cd workspace
 	
-	$ git clone "link of app"
+	$ git clone "link of app" 
 	
 	$ cd app
 	
@@ -18,6 +18,10 @@ __To download the Carousel Application__
 	
 	$ rails server
 	
-	```
+	After you run the server you can open the site by typing localhost:3000 in your browser.
+	
+  ---
+	
+
    
  
