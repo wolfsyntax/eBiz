@@ -1,5 +1,19 @@
-<h1>Login</h1>
+<script type="text/javascript">
+	var flag = 0;
 
+	function show(){
+		
+		if(flag == 0){
+			document.getElementById("password").type = "text";
+			flag = 1;
+		}else {
+			document.getElementById("password").type = "password"; 
+			flag = 0;
+		}
+	}
+</script>
+<div class = "container" style = "width: 80%; margin: auto; margin-left: 40%; margin-right: 40%; margin-top: 10%;">
+<h1>Login</h1>
 <%= form_tag sessions_path do %>
 	
 	<p>
@@ -11,6 +25,8 @@
 	
 		<%= label_tag :password %><br />
 		<%= password_field_tag :password %>
+		<input type = "checkbox" id = "unmasked" onchange="show();" />
 	</p>
 	<%= submit_tag "Login", class: "btn btn-primary" %>
 <% end %>
+</div>
