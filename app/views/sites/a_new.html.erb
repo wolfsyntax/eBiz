@@ -1,13 +1,12 @@
 <h1>Create Announcement</h1>
-
-<form>
+<%= form_tag() do%>
 	<table>
 		<tr>
 			<td>
 				Title
 			</td>
 			<td>
-				&emsp;<input type="text" /><br/>
+				&emsp;<%= text_field_tag :title %><br/>
 			</td>
 		</tr>
 
@@ -21,10 +20,46 @@
 				Content
 			</td>
 			<td>
-				&emsp;<textarea></textarea>
-			</td>
+				&emsp;<%= text_area_tag :content%>
+		</tr>
+		<tr>
+			<td></td>
+			<td>&emsp;</td>
 		</tr>
 
+		<tr>
+			<td>
+				Web URL
+			</td>
+			<td>
+				&emsp;<%= text_field_tag :Web_URL%>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>&emsp;</td>
+		</tr>
+
+		<tr>
+			<td>
+				Author
+			</td>
+			<td>
+				&emsp;<%= text_field_tag :Web_URL%>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>&emsp;</td>
+		</tr>
+
+		<tr>
+			<td>
+				Attachment
+			</td>
+			<td>
+				&emsp;<%= text_field_tag :attachment%>
+		</tr>
 		<tr>
 			<td></td>
 			<td>&emsp;</td>
@@ -39,4 +74,13 @@
 			</td>
 		</tr>
 	</table>
-</form>
+<% end %>
+<table>
+	<tr>
+		<td>
+			<%= link_to "Back to Home", "/index.html" %>
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20170227150300) do
     t.text     "content"
     t.string   "Web_URL"
     t.string   "author"
+    t.string   "attachment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

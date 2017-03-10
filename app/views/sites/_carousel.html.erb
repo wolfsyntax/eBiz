@@ -1,65 +1,51 @@
-
-<div class = "container-fluid col-md-12" style = "margin-top: 1px;">
-	<div class = "row col-md-7">
-
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<% @counter = 0 %>
-				<ol class="carousel-indicators">
-  					<% @promos.each do |f| %>
-	  				
-	  					<% if @counter == 0 then %>
-	    					<li data-target="#myCarousel" data-slide-to=<%= "0" %> class="active"></li>
-	    				<% else %>
-	    					<li data-target="#myCarousel" data-slide-to=<%= "#{@counter}" %> ></li>
-	    				<% end %>
-
-	  				
-  					<% @counter += 1 end %>
-  				</ol>
-
-  				<div class="carousel-inner" role="listbox">
-  					<% @counter = 0 %>
-  					<% @promos.each do |f| %>
-  						<% if @counter == 0 then %>
-	    					<div class="item active">
-	    						<%= link_to 'LEARN MORE', "#{f.link}", class: "btn btn-primary" %>
-	    						<%= link_to image_tag("#{f.image_name}", :alt => "Prepaid Products"), {:class => "img-responsive", :alt => "Responsive image"} %>
-
-	    					</div>
-	    				<% else %>
-	    					<div class = "item">
-	      						<%= link_to image_tag("#{f.image_name}", :alt => "Prepaid Products"), {:class => "img-responsive", :alt => "Responsive image"} %>
-	      						<%= link_to 'LEARN MORE', "#{f.link}", class: "btn btn-primary" %>
-	    					</div>
-
-	      				<% end %>
-	    					
-
-	    			<% @counter += 1 end %>
-
-  				</div>
-
-				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    				<span class="sr-only">Previous</span>
-  				</a>
-				
-				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    				<span class="sr-only">Next</span>
-  				</a>
-			</div>			
-			<br/>
-
-			
-		</div>
-	</div>
-
-	<div class = "row col-md-4">
-		<%= 'Hello, World!' %>
-	</div>
-	
-
-	<br/>
-</div>
+    <div id="myCarousel" class="carousel slide col-md-12" data-ride="carousel" style = "text-align: center;width: 100%;">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <% @counter = 0 %>
+        <% @promos.each do |f| %>  
+          <% if @counter == 0 then %>
+            <li data-target="#myCarousel" data-slide-to=<%= "0" %> class="active"></li>
+          <% else %>
+            <li data-target="#myCarousel" data-slide-to=<%= "#{@counter}" %> ></li>
+          <% end %>            
+        <% @counter += 1 end %>      
+      </ol>
+      <div class="carousel-inner col-md-12" role="listbox"  style = "margin-left: 6%;">
+        <% @counter = 0 %>
+        <% @promos.each do |f| %>
+          <% if @counter == 0 then %>         
+            <div class="item active">
+              <%= link_to image_tag("#{@promos[@counter].image_name}", :alt => "Prepaid Products"), {:class => "first-slide", :alt => "Responsive image"}, size: "1140x300"%>
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Example headline.</h1>
+                  <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+        <% else %>
+          <div class="item">
+            <%= link_to image_tag("#{@promos[@counter].image_name}", :alt => "Prepaid Products"), {:class => "", :alt => "Responsive image"}, size: "1140x300"%>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <% @counter += 1 %>
+        <% end %>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style = "width: -200%; left: 0px;">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"  style = "width: -200%; right: 0px;">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
 
