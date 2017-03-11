@@ -19,6 +19,9 @@
   <strong>Original price:</strong>
   <%= @product.original_price %>
 </p>
-
+<p>
+  <strong>Product Type:</strong>
+  <%= @product.product_type %>
+</p>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

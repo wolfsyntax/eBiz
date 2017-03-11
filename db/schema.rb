@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170311122959) do
     t.string   "product_code"
     t.decimal  "retailer_price"
     t.decimal  "original_price"
+    t.string   "product_type"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

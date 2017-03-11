@@ -10,28 +10,36 @@
       </ul>
     </div>
   <% end %>
+  <table>
+    <tr>
+      <td><label>Product Name</label>&emsp;&emsp;</td>
+      <td><%= f.text_field :product_name, class: "form-control" %></td>
+    </tr>
 
-  <div class="field">
-    <%= f.label :product_name %>
-    <%= f.text_field :product_name %>
-  </div>
+    <tr>
+      <td><label>Product Code</label></td>
+      <td>&emsp;<%= f.text_field :product_code, class: "form-control" %></td>
+    </tr>
 
-  <div class="field">
-    <%= f.label :product_code %>
-    <%= f.text_field :product_code %>
-  </div>
+    <tr>
+      <td><%= f.label :retailer_price %></td>
+      <td>&emsp;<%= f.text_field :retailer_price, class: "form-control" %></td>
+    </tr>
 
-  <div class="field">
-    <%= f.label :retailer_price %>
-    <%= f.text_field :retailer_price %>
-  </div>
+    <tr>
+      <td><%= f.label :original_price %></td>
+      <td>&emsp;<%= f.text_field :original_price, class: "form-control" %></td>
+    </tr>
 
-  <div class="field">
-    <%= f.label :original_price %>
-    <%= f.text_field :original_price %>
-  </div>
+    <tr>
+      <td><%= f.label :product_type %></td>
+      <td>&emsp;<%= f.text_field :product_type, class: "form-control" %></td>
+    </tr>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <tr>
+      <td>&emsp;</td>
+      <td><%= f.submit class: "btn btn-primary" %></td>
+    </tr>
+
+  </table>
 <% end %>
