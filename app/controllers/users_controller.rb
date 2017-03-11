@@ -77,7 +77,7 @@ class UsersController < ApplicationController
 
   def main
     @user = session[:username]
-
+    @products = Product.all
     if session[:user_id] == nil
       @user = ""
     else
