@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :transactions
+  resources :products
   get 'index.html'  => "sites#index"
   get '/about'      => "sites#about"
   get 'sites/support'
