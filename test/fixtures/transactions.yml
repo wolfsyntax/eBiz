@@ -4,8 +4,10 @@ one:
   product_code: MyString
   phone_number: MyString
   quantity: 1
+  other: MyString
 
 two:
   product_code: MyString
   phone_number: MyString
   quantity: 1
+  other: MyString

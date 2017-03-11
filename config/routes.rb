@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post '/new/promos.html' => "users#create_promo"
 
   get '/new/announcement.html' => "sites#a_new"
-
+  post '/new/queue' => "users#report"
   get '/dashboard'	=> "users#main"
   root :to => "sites#index"
   

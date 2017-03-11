@@ -5,7 +5,7 @@ class CreateTransactions < ActiveRecord::Migration[5.0]
       t.string :phone_number
       t.integer :quantity
       t.string :other
-      
+
       t.timestamps
     end
   end

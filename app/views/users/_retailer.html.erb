@@ -1,46 +1,41 @@
 
-<<<<<<< HEAD
 <br/><br/>
 <h1 style = "text-align: center; margin-left:">RETAILER</h1>
+<p id = "notice" style = "text-align: center; margin-left:"><%= notice %></p>
 <br/><br/>
-=======
-<%= form_for(@user) do |f| %>
-  Product: <%= f.select :product [['Smart Eload 15],['Smart Eload 20],['Smart Eload Economy(P30)'],['Smart Eload 50'],['Smart Eload Regular(P60)'],['Smart Eload 100'],['Smart Eload Extra(P115)'],['Smart Eload 200'],
-  ['Smart Eload 250'],['Smart Eload 300'],['Smart Eload 500'],['Smart Eload 1000']] %> <br />
-  Quantity: <%= f.text_field :product %> <br />
-  Buyer's Number: <%= f.text_field :product %> <br />
-  Option: <%= f.text_field :product %> <br />
-<%= f.button :Submit %> <br />
->>>>>>> 79ad26121617ba4dbda1398737344cb0676584a1
 
 <div style = "margin-left: 30%; margin-right: 30%; width: 80%;">
 
-<%= form_for(@user) do |f|%>
+<%= form_for @transaction, :url => {:action => :report} do |f|%>
 	<table>
 		<tr>
 			<td><label>Product</label>&emsp;&emsp;</td>
-			<td><%= select_tag 'product_code', options_for_select(@products.collect{ |f| [f.product_name, f.id] },{:class => "form-control"})%><br/><br/>
+			<td><%= select_tag :product_code, options_for_select(@products.collect{ |f| [f.product_name, f.product_code]} ,{:class => "btn-btn"})%><br/><br/>
 			</td>
 		</tr>
+		
 		<tr>
 			<td><label>Buyer's No.</label>&emsp;&emsp;</td>
-			<td><%= text_field_tag :phone_number, nil,class: "form-control" %><br/></td>
+			<td><%= text_field_tag :phone_number, nil, class: "form-control" %><br/></td>
 		</tr>
 		<tr>
 			<td><label>Quantity</label>&emsp;&emsp;</td>
-			<td><%= text_field_tag :quantity, nil,class: "form-control" %><br/></td>
+			<td><%= text_field_tag :quantity, nil, class: "form-control"  %><br/></td>
 		</tr>				
 		<tr>
-			<td><label>Option</label>&emsp;&emsp;</td>
-			<td><%= text_field_tag :others, nil,class: "form-control" %><br/></td>
+			<td><label>Others</label>&emsp;&emsp;</td>
+			<td><%= text_field_tag :others, nil, class: "form-control"  %><br/></td>
 		</tr>				
+		
 		<tr>
 			<td></td>
 			<td><%= submit_tag "Sell product", class: "form-control btn btn-primary"%></td>
 		</tr>
 	</table>
-	
 <% end %>
+<div>
+
+</div>
 <br/>
 </div>
 

@@ -77,6 +77,7 @@ class UsersController < ApplicationController
 
   def main
     @user = session[:username]
+    @transaction = Transaction.new
     @products = Product.all
     if session[:user_id] == nil
       @user = ""
@@ -89,6 +90,24 @@ class UsersController < ApplicationController
     end
   #  @users = User.all
 
+  end
+  def report
+    @transaction = Transaction.new
+    session[:message] = ""
+    @message = ""
+    @transaction.product_code = params[:product_code]
+    @transaction.phone_number = params[:phone_number]
+    @transaction.quantity = params[:quantity]
+    @transaction.other = params[:other]
+
+    respond_to do |format|
+      if @transaction.save
+        @message = "You successfully sold " + @transaction.product_code + "."
+        format.html { redirect_to "/dashboard", notice: @message }
+        session[:message] = "You sold successfully " + @transaction.product_code + "."
+        
+      end
+    end
   end
 
 private
