@@ -22,3 +22,11 @@
 
 <%= link_to 'Edit', edit_transaction_path(@transaction) %> |
 <%= link_to 'Back', transactions_path %>
+
+<% @transactions.retailers.each do |f| %>
+    <%= f.product_code %><br />
+    <%= f.phone_number %><br />
+    <%= f.quantity %><br />
+    <%= f.other %><br />
+
+<% end %>
