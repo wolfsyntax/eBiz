@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   has_secure_password
 
-  validates :username, format: {with: /(639[0-9]{9}|[a-zA-Z0-9])/, message: "Invalid format"}
+  validates :username, format: {with: /(639[0-9]{9}|09[0-9]{9})/, message: "Invalid format"}
   validates :username, length: {minimum: 6, maximum: 12, message: "The length of username must be 6 to 12 characters only"}
   validates :password, format: {with: /[a-zA-Z0-9]/, message: "Invalid format"}
   validates :password, length: {minimum: 4, maximum: 12, message: "Invalid length of password. It should be 8 to 12 alpha numeric characters"}
