@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/about'      => "sites#about"
   get 'sites/support'
 
+  get '/offers' => "sites#offers"
   get '/new/admin.html' => "users#admin_new"
   get 'balance.info'    => "users#balance"
   
