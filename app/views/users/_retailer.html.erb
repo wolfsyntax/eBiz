@@ -1,4 +1,8 @@
-
+<script style = "text/javascript">
+	function verify(){
+		var product_code = document.getElementById("")
+	}
+</script>
 <br/><br/>
 <h1 style = "text-align: center; margin-left:">RETAILER</h1>
 <p id = "notice" style = "text-align: center; margin-left:"><%= notice %></p>
@@ -10,7 +14,7 @@
 	<table>
 		<tr>
 			<td><label>Product</label>&emsp;&emsp;</td>
-			<td><%= select_tag :product_code, options_for_select(@products.collect{ |f| [f.product_name, f.product_code]} ,{:class => "btn-btn"})%><br/><br/>
+			<td><%= select_tag :product_code, options_for_select(@products.collect{ |t| [t.product_name, t.product_code]}),id: "pid", class: "form-control", onchange: "verify(); return false;"%><br/>
 			</td>
 		</tr>
 		
@@ -32,6 +36,7 @@
 			<td><%= submit_tag "Sell product", class: "form-control btn btn-primary"%></td>
 		</tr>
 	</table>
+	
 <% end %>
 <div>
 
