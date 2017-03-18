@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/:id/view'	=> "users#view"
 
   get '/new/promos' => "users#new_promo"
-  post '/new/promos.html' => "users#create_promo"
+  post '/new/promos' => "users#create_promo"
 
   get '/new/announcement.html' => "sites#a_new"
   post '/new/queue' => "users#report"
