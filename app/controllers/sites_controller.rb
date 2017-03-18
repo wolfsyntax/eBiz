@@ -9,6 +9,10 @@ class SitesController < ApplicationController
       @promos = Carousel.all
   	end
 
+    def offers
+      
+    end
+    
   	def add_announcement
   		@announcement = Announcement.new
   	end
