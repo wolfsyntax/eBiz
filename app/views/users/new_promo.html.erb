@@ -1,7 +1,32 @@
-<h1>Create new promo</h1>
-<%= form_tag '/new/promos.html' do %>
-	
-	<%= text_field_tag :image_name %>
-	<%= text_field_tag :links %>
-	<%= submit_tag "Create"%>
+<%= form_for("") do |f| %>
+  <% if @carousel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@carousel.errors.count, "error") %> prohibited this carousel from being saved:</h2>
+
+      <ul>
+      <% @carousel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br/><br/><br/>
+<div class = "container" align="center">
+  <table>
+  <tr class="field">
+    <td><br/><%= f.label :image_name %></td>
+    <td><br/>&emsp;<%= f.text_field :image_name %></td>
+  </tr>
+
+  <tr class="field">
+    <td><br/><%= f.label :link %></td>
+    <td><br/>&emsp;<%= f.text_field :link %></td>
+
+  </div>
+
+  <tr class="actions">
+    <td><br/>&emsp;</td><td><br/><%= f.submit %></td>
+  </tr>
+  </table>
+ </div>
 <% end %>
