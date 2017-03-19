@@ -7,6 +7,7 @@ class SitesController < ApplicationController
   		@user = session[:username]
   		@announce = Announcement.all
       @promos = Carousel.all
+      @user = User.new
   	end
 
     def offers
@@ -33,6 +34,6 @@ class SitesController < ApplicationController
   	end
   private
     def announcement_params
-      params.require(:announcement).permit(:title,:content, :Web_URL, :author, :attachment)
+      params.require(:announcement).permit(:title, :content, :Web_URL, :author, :attachment)
     end
 end
