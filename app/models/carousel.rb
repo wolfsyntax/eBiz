@@ -2,7 +2,7 @@ class Carousel < ApplicationRecord
     
 #	validate :verify_data
 	validates :image_name, presence: true
-	validates :image_name, format: {with: /[a-zA-Z0-9].(jpg|png|jpeg)/,message: "Invalid data file name"}
+	validates :image_name, format: {with: /\A[a-zA-Z0-9]+\z.(jpg|png|jpeg)/,message: "Invalid data file name"}
 
 =begin
 	def verify_data
