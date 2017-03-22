@@ -1,0 +1,28 @@
+                    <div class="dropdown-menu col-md-6" role="menu" style="width: auto;">
+                      <%= form_tag "/users" do |f| %>
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                          </span>
+                          <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                        </div>
+
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                          </span>
+                          <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                        </div>
+
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                          </span>
+                          <input style="width: auto;" type="password" name="confirm-password" id="confirm-password" tabindex="3" class="form-control" placeholder="Confirm Password">
+                        </div> 
+
+                        <div> 
+                          <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register">
+                        </div>  
+                      <% end %>
+                           </div>

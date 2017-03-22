@@ -1,0 +1,90 @@
+<% if params[:controllers] == "users" then %><h1>Create Accounts</h1> <% end %>
+<%= form_for @user do |f| %>
+	
+	<% if @user.errors.any? %>
+		<div class = "error_messages" >
+			<h2>Form is invalid</h2>
+
+			<ul>
+				<% for message in @user.errors.full_messages %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+<!-- --------------------------------------------------------------- -->	
+<table>
+	<tr>
+		<% if params[:controllers] == "users" then %><td>&emsp;Username</td><% end %>
+		<td>&emsp;
+			<% if params[:controllers] == "users" then %>
+				<%= f.text_field :username %>
+			<% else %>
+				<%= f.text_field :username, placeholder: "Username" %>
+			<% end %>		
+		</td>
+	</tr>
+
+<% if params[:controllers] == "users" then %>
+	<tr>
+		<td>&emsp;</td>
+		<td>&emsp;</td>
+	</tr>
+<% end %>
+	<tr>
+		<% if params[:controllers] == "users" then %><td>&emsp;Password</td><% end %>
+		<td>&emsp;
+			<% if params[:controllers] == "users" then %>
+				<%= f.password_field :password %>
+			<% else %>
+				<%= f.password_field :password, placeholder: "Password" %><br/>
+			<% end %>
+		</td>
+	</tr>
+<% if params[:controllers] == "users" then %>
+	<tr>
+		<td>&emsp;</td>
+		<td>&emsp;</td>
+	</tr>
+<% end %>
+	<tr>
+		<% if params[:controllers] == "users" then %><td>&emsp;Confirm Password&emsp;</td><% end %>
+		<td>&emsp;
+			<% if params[:controllers] == "users" then %>
+				<%= f.password_field :password_confirmation %>
+			<% else %>
+				<%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+			<% end %>
+		</td>
+	</tr>
+<% if params[:controllers] == "users" then %>
+	<tr>
+		<td>&emsp;</td>
+		<td>&emsp;</td>
+	</tr>
+<% end %>
+	<tr>
+		<% if params[:controllers] == "users" then %>
+			<td></td>
+	 		<td>&emsp;
+	 			<%= f.submit 'Signup', class: 'btn btn-success' %>
+	 		</td>
+	 	<% else %>
+	 		<td>&emsp;
+	 			<%= f.submit 'Signup', class: 'btn btn-primary', style: "width: 90%;" %>
+	 		</td>	 		
+	 	<% end %>
+	</tr>
+
+	<tr>
+		<td>&emsp;</td>
+		<td>&emsp;<%= f.hidden_field(:account_type, :value => "admin") %></td>
+	</tr>
+	
+	
+
+
+
+
+</table>
+<% end %>
