@@ -7,7 +7,7 @@ class Product < ApplicationRecord
 	validates :product_name, format: {with: /\A[a-zA-Z]+\z/}
 	
 	validates_presence_of :product_code
-	validates :product_code, format: {with: /\A[a-zA-Z]+\z/}
+	validates :product_code, format: {with: /\A[a-zA-Z0-9]+\z/}
 	
 	validates_presence_of :retailer_price
 	validates :retailer_price, numericality: true

@@ -18,7 +18,7 @@
 	</nav>
 	<br/>
 
-	<% if @account != 'retailer' %>
+	<% if @account != "retailer" %>
 
 		<div class = "container-fluid col-md-12" style = "margin-top: 3%;">
 			<div class = "col-md-2">
@@ -47,6 +47,7 @@
 						<td>Transaction Report</td>
 					</tr>
 					<% x = 1 %>
+					<% if @clients != nil %>
 					<% @clients.each do |f| %>
 						<% if f.account_type == 'retailer' %>
 						<tr>
@@ -59,15 +60,15 @@
 						</tr>
 						<% end %>
 					<% end %>
+					<% end %>
 				</table>
 			</div>
 			
 		</div>
-
+		
 	<% else %>
 		<br />
 		<%= render "retailer" %>
-
 		<!-- table>
 		  <thead>
 		    <tr>

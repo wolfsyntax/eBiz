@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
   get 'logout.do'	=> "sessions#destroy", :as => "logout"
   get 'login.do'	=> "sessions#create", :as => "login"
-
+  
   #delete record
   get '/:id/delete' => "users#destroy"
 

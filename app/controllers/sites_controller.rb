@@ -6,6 +6,7 @@ class SitesController < ApplicationController
   	def index
 
   		@user = session[:username]
+      session[:user_id] = nil
   		@announce = Announcement.all
       @promos = Carousel.all
       @user = User.new
