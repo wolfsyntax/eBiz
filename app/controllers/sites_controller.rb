@@ -21,7 +21,7 @@ class SitesController < ApplicationController
   	end
 
     def offers
-      
+      @announce = Announcement.all
     end
     
   	def add_announcement

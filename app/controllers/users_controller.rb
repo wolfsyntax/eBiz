@@ -3,7 +3,9 @@ class UsersController < ApplicationController
   def new_promo
     @carousel = Carousel.new
   end
-
+  def show
+    @user = User.find(params[:id])
+  end
   def create_promo
     @carousel = Carousel.new
     @carousel.image_name = params[:image_name]

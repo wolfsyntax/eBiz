@@ -1,14 +1,24 @@
+	
+<div align = "center">
 	<h1>Account Details</h1>
-<div>
-	
-	<p>Username: &emsp;<%= @user.username %><br/></p>
-	<p>Password: &emsp;<%= @user.password_digest %><br/></p>
-	<p>Account Type: &emsp;<%= @user.account_type %><br/></p>
-	
-	<% if session[:username] != nil %>
-		<%= link_to 'Login', '/dashboard' %>
-	<% else %>
-		<%= link_to 'Login', '/login.do' %>
-	<% end %>
-link_to
+	<table>
+		<tr>
+			<td>Username: &emsp;<%= @user.username %><br/></td>
+		</tr>
+		<tr>
+			<td>Account Type: &emsp;<%= @user.account_type %><br/></td>
+		</tr>
+		<tr>
+			<td>
+				<% if session[:username] != nil %>
+					<%= link_to 'Login', '/dashboard' %>
+				<% else %>
+					<%= link_to 'Login', '/login.do' %>
+				<% end %>
+			</td>
+			<td>
+				<%= link_to "Back to Home", "" %>
+			</td>
+		</tr>
+	</table>
 </div>
