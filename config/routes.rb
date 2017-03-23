@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :user_data
   resources :transactions
   resources :products
   get 'index.html'  => "sites#index"
