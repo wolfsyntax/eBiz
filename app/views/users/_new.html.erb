@@ -32,23 +32,6 @@
 	</tr>
 <% end %>
 	<tr>
-		<% if params[:controllers] == "users" then %><td>&emsp;First Name</td><% end %>
-		<td>&emsp;
-			<% if params[:controllers] == "users" then %>
-				<%= f.text_field :first_name %>
-			<% else %>
-				<%= f.text_field :first_name, placeholder: "First Name" %>
-			<% end %>		
-		</td>
-	</tr>
-
-<% if params[:controllers] == "users" then %>
-	<tr>
-		<td>&emsp;</td>
-		<td>&emsp;</td>
-	</tr>
-<% end %>
-	<tr>
 		<% if params[:controllers] == "users" then %><td>&emsp;Password</td><% end %>
 		<td>&emsp;
 			<% if params[:controllers] == "users" then %>
@@ -74,7 +57,6 @@
 			<% end %>
 		</td>
 	</tr>
-
 <% if params[:controllers] == "users" then %>
 	<tr>
 		<td>&emsp;</td>
@@ -96,7 +78,7 @@
 
 	<tr>
 		<td>&emsp;</td>
-		<td>&emsp;<%= f.hidden_field(:account_type, :value => "admin") %></td>
+		<td>&emsp;<%= f.hidden_field(:account_type, :value => "retailer") %></td>
 	</tr>
 	
 	

@@ -52,16 +52,13 @@
       <% if params[:action] != "about" %>
         <table>
           <tr>
-<<<<<<< HEAD
             <td>Updates Bulletin&emsp;</td><td>
               <marquee>
-                <% @announce.each do |a| %>
-                  <%= a %>
+                <%= @announce.each do |a| %>
+                  A<%= a %>
                 <% end %>
-              </marquee></td>
-=======
-            <td>Updates Bulletin&emsp;</td><td><marquee>Try out the new RPG Game Kings Raid! Download now. Available at playstore.</marquee></td>
->>>>>>> 2ee69f8330499de988b627cc22ac8c83bf0a6e1a
+              </marquee>
+            </td>
           </tr>
         </table>
       <% end %>
