@@ -8,14 +8,11 @@
             <li class="<%= 'active' if params[:action] == 'index' %>">
               <%= link_to "eBiz", "/index.html" %>
             </li>
-            <li class="<%= 'active' if params[:action] == 'about' %>">
-              <%= link_to "ABOUT", "/about" %>
-            </li>
-            <li class="<%= 'active' if params[:action] == 'support' %>">
-              <%= link_to "FAQ", "" %>
-            </li>
             <li class ="<%= 'active' if params[:action] == 'products' %>">
               <%= link_to "PRODUCTS", "/offers" %>
+            </li>
+             <li class="<%= 'active' if params[:action] == 'about' %>">
+              <%= link_to "ABOUT", "/about" %>
             </li>
             <li class="navbar-right" style="margin-right: 2%;">
               <ul class="nav navbar-nav navbar-right">

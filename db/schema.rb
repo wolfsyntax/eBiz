@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20170311122959) do
     t.string   "phone_number"
     t.integer  "quantity"
     t.string   "other"
+    t.integer :user_id
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
