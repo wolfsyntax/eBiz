@@ -101,6 +101,7 @@ class UsersController < ApplicationController
     @transaction.phone_number = params[:phone_number]
     @transaction.quantity = params[:quantity]
     @transaction.other = params[:other]
+<<<<<<< HEAD
     @transaction.user_id =  params[:tid]
   #  respond_to do |format|
       if @transaction.save
@@ -111,6 +112,21 @@ class UsersController < ApplicationController
         
       end
    # end
+=======
+    
+      respond_to do |format|
+        if @transaction.save
+         @message = "You successfully sold " + @transaction.product_code + "."
+         format.html { redirect_to "/dashboard", notice: @message }
+         session[:message] = "You sold successfully " + @transaction.product_code + "."
+            else
+             @message = "You failed " + @transaction.product_code + "."
+              format.html { redirect_to "/dashboard", notice: @message }
+        end
+    
+
+      end
+>>>>>>> refs/remotes/origin/master
   end
 
 private
