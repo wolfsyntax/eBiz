@@ -35,7 +35,7 @@
 		<% if params[:controllers] == "users" then %><td>&emsp;Password</td><% end %>
 		<td>&emsp;
 			<% if params[:controllers] == "users" then %>
-				<%= f.password_field :password %>
+				<div class="glyphicon glyphicon-lock"><%= f.password_field :password %></div>
 			<% else %>
 				<%= f.password_field :password, placeholder: "Password" %><br/>
 			<% end %>

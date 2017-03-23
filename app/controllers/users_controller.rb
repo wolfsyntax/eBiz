@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       redirect_to '/signup.php'
     end
   end
-
+    
   def new
   	@user = User.new
   end

@@ -2,7 +2,7 @@
   <tr>
     <td>
       <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
-        <div class="container-fluid">
+        <div class="container-fluid" >
 
           <ul class="nav navbar-nav navbar-fixed-top">
             <li class="<%= 'active' if params[:action] == 'index' %>">
@@ -17,17 +17,19 @@
             <li class ="<%= 'active' if params[:action] == 'products' %>">
               <%= link_to "PRODUCTS", "/offers" %>
             </li>
-            <li><%= link_to "WHERE TO BUY", "" %></li>
-            <li class = "navbar-right" style = "margin-right:  10%; margin-top: 0px;">
-              <%= render "sessions/new" %>
-              <div class="dropdown">
-                <div class="btn btn-primary dropdown-toggle container-fluid" style="width:auto; margin-right: -5%;" type="button" data-toggle="dropdown">Sign Up
+            <li class="navbar-right" style="margin-right: 2%;">
+              <ul class="nav navbar-nav navbar-right">
+              <li  style="margin-top: 0px;"><%= render "sessions/new" %></li>
+              <li  style = " margin-top: 8px;">
+                <div class="dropdown">
+                  <div class="btn btn-primary dropdown-toggle container-fluid"  type="button" data-toggle="dropdown">Sign up</div>
+                  <ul class="dropdown-menu">
+                    <li><%= render "users/new" %></li>
+                  </ul>
                 </div>
-                <ul class="dropdown-menu">
-                  <li><%= render "users/new" %></li>
-                </ul>
-              </div>
-            </li>                  
+              </li>
+              </ul> 
+            </li>                 
           </ul>  
         </div>
       </nav>
