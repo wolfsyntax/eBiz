@@ -36,7 +36,7 @@
 			<td><%= submit_tag "Sell product", class: "form-control btn btn-primary"%></td>
 		</tr>
 	</table>
-	
+	<%= hidden_field_tag :tid,session[:user_id] %>
 <% end %>
 <div class="row">
 	<div>

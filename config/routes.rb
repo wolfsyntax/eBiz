@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   
   get 'logout.do'	=> "sessions#destroy", :as => "logout"
   get 'login.do'	=> "sessions#create", :as => "login"
+<<<<<<< HEAD
+  
+=======
   get 'signin'  => "sessions#create", :as => "signin"
+>>>>>>> refs/remotes/origin/master
   #delete record
   get '/:id/delete' => "users#destroy"
 

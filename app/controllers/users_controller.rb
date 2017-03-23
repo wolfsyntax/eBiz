@@ -59,7 +59,8 @@ class UsersController < ApplicationController
   def view
   	
   	@user = User.find(params[:id])
-
+    session[:user_type] = @user.account_type
+    
   end
 
   def admin_new
@@ -84,8 +85,12 @@ class UsersController < ApplicationController
       @user = ""
     else
       @users = User.find(session[:user_id])
+<<<<<<< HEAD
       @account = @users.account_type
       session[:account_type] = @account
+=======
+      @account =  session[:user_type]
+>>>>>>> 2ee69f8330499de988b627cc22ac8c83bf0a6e1a
       @acname = @users.username
       @clients = User.all
 
@@ -101,6 +106,18 @@ class UsersController < ApplicationController
     @transaction.phone_number = params[:phone_number]
     @transaction.quantity = params[:quantity]
     @transaction.other = params[:other]
+<<<<<<< HEAD
+    @transaction.user_id =  params[:tid]
+  #  respond_to do |format|
+      if @transaction.save
+       session[:message] = "You successfully sold " + @transaction.product_code + "."
+ #       format.html { redirect_to "/dashboard", notice: @message }
+        redirect_to "/dashboard", notice: @message
+        session[:message] = "You sold successfully " + @transaction.product_code + "."
+        
+      end
+   # end
+=======
     
       respond_to do |format|
         if @transaction.save
@@ -114,6 +131,7 @@ class UsersController < ApplicationController
     
 
       end
+>>>>>>> refs/remotes/origin/master
   end
 
 private
