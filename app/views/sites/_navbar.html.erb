@@ -54,8 +54,9 @@
           <tr>
             <td>Updates Bulletin&emsp;</td><td>
               <marquee>
-                <%= @announce.each do |a| %>
-                  A<%= a %>
+                <% @announce.each do |a| %>
+                  <%= a.title %>&emsp;|&emsp;
+                  <%= a.content%>
                 <% end %>
               </marquee>
             </td>
@@ -63,5 +64,8 @@
         </table>
       <% end %>
     </td>
+  </tr>
+  <tr>
+    <td>&emsp;</td>
   </tr>
 </table>
