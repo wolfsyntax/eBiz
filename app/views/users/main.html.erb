@@ -23,12 +23,13 @@
 		<div class = "container-fluid col-md-12" style = "margin-top: 3%;">
 			<div class = "col-md-2">
 				<ul class="nav navbar navbar-fixed-left">
-					<li><%= link_to 'Register new account', ''%></li>
+					<li><%= link_to 'Register new account', '/signup.php'%></li>
 					<li><%= link_to 'View All subscribers', ''%></li>
 					<li><%= link_to 'Change Password', '' %></li>
 				</ul>
 			</div>
 			<div class = "col-md-10">
+				<% if @clients != nil then %>
 				<table class = "col-md-12">
 					<tr>
 						<td>
@@ -47,6 +48,7 @@
 						<td>Transaction Report</td>
 					</tr>
 					<% x = 1 %>
+					
 					<% @clients.each do |f| %>
 						<% if f.account_type == 'retailer' %>
 						<tr>
@@ -59,7 +61,9 @@
 						</tr>
 						<% end %>
 					<% end %>
+					
 				</table>
+				<% end %>
 			</div>
 			
 		</div>

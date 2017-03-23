@@ -4,35 +4,57 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if session[:account_type] != 'retailer' then
+      @products = Product.all
+    else
+      redirect_to '/dashboard '
+    end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+
+    if session[:account_type] == 'retailer' then
+      redirect_to '/dashboard '
+    end
+
   end
 
   # GET /products/new
   def new
-    @product = Product.new
+    if session[:account_type] == 'retailer' then
+      redirect_to '/dashboard '
+    else
+      @product = Product.new
+    end
+
+    
   end
 
   # GET /products/1/edit
   def edit
+    if session[:account_type] == 'retailer' then
+      redirect_to '/dashboard '
+    end
   end
 
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(product_params)
+    if session[:account_type] == 'retailer' then
+      redirect_to '/dashboard '
+    else
+      @product = Product.new(product_params)
 
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @product.save
+          format.html { redirect_to @product, notice: 'Product was successfully created.' }
+          format.json { render :show, status: :created, location: @product }
+        else
+          format.html { render :new }
+          format.json { render json: @product.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -40,13 +62,17 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    respond_to do |format|
-      if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { render :show, status: :ok, location: @product }
-      else
-        format.html { render :edit }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
+    if session[:account_type] == 'retailer' then
+      redirect_to '/dashboard '
+    else
+      respond_to do |format|
+        if @product.update(product_params)
+          format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+          format.json { render :show, status: :ok, location: @product }
+        else
+          format.html { render :edit }
+          format.json { render json: @product.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -54,10 +80,14 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    @product.destroy
-    respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
-      format.json { head :no_content }
+    if session[:account_type] == 'retailer' then
+      redirect_to '/dashboard '
+    else
+      @product.destroy
+      respond_to do |format|
+        format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 

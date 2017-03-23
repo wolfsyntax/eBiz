@@ -52,7 +52,12 @@
       <% if params[:action] != "about" %>
         <table>
           <tr>
-            <td>Updates Bulletin&emsp;</td><td><marquee>New Smart Call and Text promo! 6 days unli call and text to all networks for only 150php!</marquee></td>
+            <td>Updates Bulletin&emsp;</td><td>
+              <marquee>
+                <% @announce.each do |a| %>
+                  <%= a %>
+                <% end %>
+              </marquee></td>
           </tr>
         </table>
       <% end %>

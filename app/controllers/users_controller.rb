@@ -85,6 +85,7 @@ class UsersController < ApplicationController
     else
       @users = User.find(session[:user_id])
       @account = @users.account_type
+      session[:account_type] = @account
       @acname = @users.username
       @clients = User.all
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'index.html'  => "sites#index"
   get '/about'      => "sites#about"
   get 'sites/support'
+  post '/sites' => "sites#save_announcement"
 
   get '/offers' => "sites#offers"
   get '/new/admin.html' => "users#admin_new"

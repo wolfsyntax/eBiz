@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% if session[:account_type] != 'retailer'%>
 <h1>Products</h1>
 
 <table>
@@ -31,3 +31,5 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+
+<% end %>

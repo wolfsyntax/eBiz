@@ -1,80 +1,71 @@
-<h1>Create Announcement</h1>
-<%= form_tag() do%>
+<div class="well" style="width:30%; margin:auto;">
 	<table>
-		<tr>
-			<td>
-				Title
-			</td>
-			<td>
-				&emsp;<%= text_field_tag :title %><br/>
-			</td>
-		</tr>
-
-		<tr>
-			<td></td>
-			<td>&emsp;</td>
-		</tr>
-
-		<tr>
-			<td>
-				Content
-			</td>
-			<td>
-				&emsp;<%= text_area_tag :content%>
-		</tr>
-		<tr>
-			<td></td>
-			<td>&emsp;</td>
-		</tr>
-
-		<tr>
-			<td>
-				Web URL
-			</td>
-			<td>
-				&emsp;<%= text_field_tag :Web_URL%>
-		</tr>
-
-		<tr>
-			<td></td>
-			<td>&emsp;</td>
-		</tr>
-
-		<tr>
-			<td>
-				Author
-			</td>
-			<td>
-				&emsp;<%= text_field_tag :Web_URL%>
-		</tr>
-
-		<tr>
-			<td></td>
-			<td>&emsp;</td>
-		</tr>
-
-		<tr>
-			<td>
-				Attachment
-			</td>
-			<td>
-				&emsp;<%= text_field_tag :attachment%>
-		</tr>
-		<tr>
-			<td></td>
-			<td>&emsp;</td>
-		</tr>
-
-		<tr>
-			<td>
-
-			</td>
-			<td>
-				&emsp;<input type = "submit" value = "Create Announcement"/>
-			</td>
-		</tr>
+		<thead>
+			<tr>
+				<td colspan="3"><h1>Create Announcement</h1></td>
+			</tr>
+		</thead>
+		<%= form_tag('/sites') do%>
+		<tbody>
+			<tr>
+				<td>Title</td>
+				<td>&emsp;</td>
+				<td><%= text_field_tag :title, nil, placeholder: 'Title', class: "form-control input-md" %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>&emsp;</td>
+			</tr>
+			<tr>
+				<td>Content</td>
+				<td>&emsp;</td>
+				<td><%= text_area_tag :content, nil, placeholder: 'Content', class: "form-control" %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>&emsp;</td>
+			</tr>
+			<tr>
+				<td>Web URL</td>
+				<td>&emsp;</td>
+				<td><%= text_field_tag :Web_URL, nil, placeholder: 'Web URL', class: "form-control" %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>&emsp;</td>
+			</tr>
+			<tr>
+				<td>Author</td>
+				<td>&emsp;</td>
+				<td><%= text_field_tag :author, nil, placeholder: 'Author', class: "form-control" %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>&emsp;</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>&emsp;</td>
+				<td><%= text_field_tag :attachment, nil, placeholder: 'Attachment', class: "form-control" %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>&emsp;</td>
+			</tr>
+			<tr>
+				<td>&emsp;</td>
+				<td><%= submit_tag "Submit", class: "btn btn-primary" %></td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+		<% end %>
 	</table>
-<% end %>
+</div>
+
 <table>
 	<tr>
 		<td>

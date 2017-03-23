@@ -3,6 +3,14 @@ class SitesController < ApplicationController
     
   	end
 
+    def a_new
+      if session[:account_type] == 'retailer' then
+        redirect_to '/dashboard '
+      else
+        @announcement = Announcement.new
+      end
+    end
+
   	def index
 
   		@user = session[:username]
@@ -17,7 +25,12 @@ class SitesController < ApplicationController
     end
     
   	def add_announcement
-  		@announcement = Announcement.new
+      if session[:account_type] == 'retailer' then
+        redirect_to '/dashboard '
+      else
+        @announcement = Announcement.new
+      end
+  		
   	end
 =begin
    t.string   :title
@@ -27,8 +40,22 @@ class SitesController < ApplicationController
       t.string  :attachment
 =end
     def save_announcement
-      @announcement = Announcement.new announcement_params
-      @announcement.save
+      if session[:account_type] == 'retailer' then
+        redirect_to '/dashboard '
+      else
+        @announcement = Announcement.new
+        @announcement.author = params[:author]
+        @announcement.title = params[:title]
+        @announcement.content = params[:content]
+        @announcement.Web_URL = params[:Web_URL]
+        @announcement.attachment = params[:attachment]
+
+        if @announcement.save then
+          redirect_to '/index.html'
+        else
+          redirect_to '/new/announcement.html'
+        end
+      end
     end
 
   	def support
